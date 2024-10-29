@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Conversational AI Plugin",
+  "name_for_model": "Conversational AI Plugin",
+  "description_for_human": "Use this tool to provide information on the company",
+  "description_for_model": "Plugin for providing information on the company's loyalty program",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:3000/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "http://localhost:3000/logo.png",
+  "contact_email": "mightyoakcoder@gmail.com",
+  "legal_info_url": ""
+}

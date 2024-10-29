@@ -1,0 +1,101 @@
+openapi: "3.0.1"
+info:
+  title: " Conversational AI Plugin Handler"
+  version: "1.0.0"
+paths:
+  /:
+    get: 
+      summary: "Get information about the company's loyalty program"
+      operationId: "getLoyaltyById"
+      parameters:
+        - in: query
+          name: q
+          schema:
+            type: string
+          required: true
+          description: "Tell me about the company's loyalty program"
+      responses:
+        "200":
+          description: "Successful operation."
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                        link:
+                          type: string
+                        snippet:
+                          type: string
+        "400":
+          description: "Bad request. Invalid or missing query parameter."
+  /vegOptions:
+    get: 
+      summary: "Get information about the company's vegetarian options"
+      operationId: "getVegOptionsById"
+      parameters:
+        - in: query
+          name: q
+          schema:
+            type: string
+          required: true
+          description: "Information about the compnay's vegetarian options"
+      responses:
+        "200":
+          description: "Successful operation."
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                        link:
+                          type: string
+                        snippet:
+                          type: string
+        "400":
+          description: "Bad request. Invalid or missing query parameter."
+  /myProgram:
+    get: 
+      summary: "Get information about the loyalty program"
+      operationId: "getmyProgramById"
+      parameters:
+        - in: query
+          name: q
+          schema:
+            type: string
+          required: true
+          description: "Get information about the loyalty program"
+      responses:
+        "200":
+          description: "Successful operation."
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                        link:
+                          type: string
+                        snippet:
+                          type: string
+        "400":
+          description: "Bad request. Invalid or missing query parameter."
